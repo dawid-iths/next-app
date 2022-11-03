@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 
 interface IButtonProps {
     children?: React.ReactNode;
@@ -9,12 +8,10 @@ interface IButtonProps {
 
 const ClickEventButton: React.FC<IButtonProps> = ({ onClick, children, ...props }) => {
     return (
-        <ButtonStyles {...props} onClick={onClick}>
+        <button {...props} onClick={onClick}>
             {children}
-        </ButtonStyles>
+        </button>
     );
 };
 
 export default ClickEventButton;
-
-const ButtonStyles = styled.button``;
